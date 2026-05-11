@@ -112,9 +112,10 @@ export default function About() {
           </div>
           <div className="space-y-5 text-body-text leading-relaxed">
             <p>
-              In 2008, at 30 years old, Matt Sprang founded Greater Philadelphia
-              Aquatic Enterprises, starting with $50,000 in top-line revenue and
-              a conviction that the business could become something real.
+              In 2008, at 30 years old, Matt Sprang took over Greater
+              Philadelphia Aquatic Enterprises; he inherited a program
+              generating roughly $150,000 in revenue and built it to $1.2
+              million over 16 years.
             </p>
             <p>
               For the next 16 years, he built it; by the time he sold it in 2024

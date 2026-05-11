@@ -212,7 +212,7 @@ export default function Home() {
               "25 years developing young leaders",
               "200+ facilitated events",
               "9.4 average rating",
-              "Built $50K to $1.2M, sold for seven figures",
+              "Built $150K to $1.2M, sold for seven figures",
             ].map((item, i) => (
               <span
                 key={i}
@@ -237,10 +237,11 @@ export default function Home() {
           <div className="space-y-5 text-body-text leading-relaxed">
             <p>
               Matt Sprang spent 16 years as the Owner and CEO of Greater
-              Philadelphia Aquatic Enterprises, building the organization from
-              $50,000 in top-line revenue to $1.2 million, leading a staff of 45
-              employees, surviving an $800,000 construction debt, and selling
-              the business for a seven-figure sum in 2024.
+              Philadelphia Aquatic Enterprises; he took over a program
+              generating roughly $150,000 in revenue and built it to $1.2
+              million, leading a staff of 45 employees, surviving an $800,000
+              construction debt, and selling the business for a seven-figure sum
+              in 2024.
             </p>
             <p>
               Before that, and during it, he spent 25 years coaching young
