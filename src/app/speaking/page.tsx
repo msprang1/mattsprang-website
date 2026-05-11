@@ -3,9 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Speaking",
+  title:
+    "Speaking | Matt Sprang | Leadership & Talent Development Speaker | Philadelphia",
   description:
-    "Matt speaks to business groups, associations, chambers of commerce, and corporate audiences about the real cost of underdeveloped talent. Built on 25 years of working directly with younger associates and 16 years of running a real business.",
+    "Matt Sprang speaks to chambers of commerce, associations, and corporate audiences about the real cost of underdeveloped Millennial and Gen Z talent. Greater Philadelphia region and national bookings.",
 };
 
 export default function Speaking() {
@@ -33,7 +34,7 @@ export default function Speaking() {
             <div className="relative">
               <Image
                 src="/images/matt-speaking-1.jpg"
-                alt="Matt Sprang speaking"
+                alt="Matt Sprang speaking to a business audience in the Greater Philadelphia region"
                 width={500}
                 height={500}
                 className="w-full h-auto object-cover"
@@ -52,7 +53,7 @@ export default function Speaking() {
         </div>
       </section>
 
-      {/* Body */}
+      {/* What Matt talks about */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div>
@@ -74,14 +75,64 @@ export default function Speaking() {
               points. He tells the truth about what it costs to ignore the
               people who are going to run your organization someday, and he
               gives audiences a concrete way to start thinking differently about
-              it.
+              it. Most audiences have not experienced this kind of conversation
+              in a business setting, and the effect tends to linger.
+            </p>
+            <p>
+              Matt speaks across the Greater Philadelphia region and is
+              available for national bookings by arrangement. Learn more about
+              his approach to{" "}
+              <Link
+                href="/talent-development"
+                className="text-colonial-blue hover:text-colonial-dark transition-colors duration-200"
+              >
+                talent development programs
+              </Link>{" "}
+              for organizations.
             </p>
           </div>
         </div>
       </section>
 
-      {/* What audiences leave with */}
+      {/* Signature talk */}
       <section className="bg-white py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div>
+              <div className="section-rule" />
+              <h2 className="font-serif text-3xl text-charcoal mb-6">
+                The signature talk
+              </h2>
+            </div>
+            <div className="space-y-5 text-body-text leading-relaxed">
+              <p className="font-serif text-xl text-charcoal">
+                The Cost of Ignoring Your Bench
+              </p>
+              <p>
+                What happens to organizations that invest only in the leaders
+                they already have. This talk is built for chambers of commerce,
+                associations, and corporate all-hands events and runs
+                45&ndash;60 minutes.
+              </p>
+              <p>
+                Audiences leave with a clear picture of why young talent leaves,
+                a different way to think about leadership development that
+                applies at any org size, and a specific, honest self-assessment
+                of where their organization actually stands. Matt does not give
+                people a framework. He gives them a question they have not been
+                able to stop thinking about.
+              </p>
+              <p className="text-sm text-light-gray italic">
+                Custom talks built around your audience&apos;s specific context
+                are also available. Start with a conversation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What audiences leave with */}
+      <section className="bg-off-white py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -194,49 +245,6 @@ export default function Speaking() {
                 ))}
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials placeholder */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <div className="section-rule" />
-        <h2 className="font-serif text-3xl text-charcoal mb-10">
-          What people say
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="border border-dashed border-[#c8c3bc] bg-white p-8"
-            >
-              <p className="text-light-gray text-sm italic">
-                Testimonial coming soon.
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Demo video placeholder */}
-      <section className="max-w-6xl mx-auto px-6 pb-16">
-        <p className="text-xs uppercase tracking-widest text-colonial-blue mb-5 font-semibold">
-          Watch Matt speak
-        </p>
-        <div
-          className="w-full aspect-video flex items-center justify-center border-2"
-          style={{ borderColor: "#81a2b6", backgroundColor: "#f0f7fb" }}
-        >
-          <div className="text-center px-8">
-            <div
-              className="w-16 h-16 rounded-full border-2 flex items-center justify-center mx-auto mb-4"
-              style={{ borderColor: "#81a2b6" }}
-            >
-              <svg className="w-6 h-6 ml-1" fill="none" viewBox="0 0 24 24">
-                <path d="M5 3l14 9-14 9V3z" fill="#81a2b6" />
-              </svg>
-            </div>
-            <p className="text-light-gray text-sm">Demo reel coming soon.</p>
           </div>
         </div>
       </section>

@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Whether you're thinking about The Guild, looking to book a talk, or want to have a real conversation about where your business is — this is the right place to start.",
+    "Looking to book a talk, start coaching, or have a real conversation about your team? Matt Sprang reads every message himself. Greater Philadelphia region and national bookings.",
 };
 
 export default function Contact() {
@@ -22,9 +22,9 @@ export default function Contact() {
             </h1>
             <div className="section-rule" />
             <p className="text-body-text leading-relaxed">
-              Whether you&apos;re thinking about The Guild, looking to book a
-              talk, or just want to have a real conversation about where your
-              business is, this is the right place to start.
+              Whether you&apos;re looking to book a talk, start coaching, or
+              just want to have a real conversation about where your team is,
+              this is the right place to start.
             </p>
           </div>
         </div>
@@ -78,7 +78,8 @@ export default function Contact() {
                   <span className="text-colonial-blue">&#9670;</span> Speaking
                 </p>
                 <p className="flex items-start gap-2">
-                  <span className="text-colonial-blue">&#9670;</span> The Guild
+                  <span className="text-colonial-blue">&#9670;</span> Talent
+                  Development
                 </p>
                 <p className="flex items-start gap-2">
                   <span className="text-colonial-blue">&#9670;</span> Coaching

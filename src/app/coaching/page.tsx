@@ -1,16 +1,72 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Coaching",
+  title:
+    "Coaching | Matt Sprang | Leadership Coach for Emerging Leaders & Business Owners | Philadelphia",
   description:
-    "One-on-one coaching for leaders who are ready to do the work. Matt works with young professionals growing into leadership and with business owners navigating transitions.",
+    "One-on-one coaching for emerging leaders in their 20s and 30s and for business owners navigating transitions. Greater Philadelphia region. Strengths-based, direct, built on questions more than answers.",
+};
+
+const schemaOrg = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      name: "Leadership Coaching",
+      provider: {
+        "@type": "Person",
+        name: "Matt Sprang",
+        url: "https://mattsprang.com",
+      },
+      description:
+        "One-on-one coaching for emerging leaders in their 20s and 30s and for business owners navigating transitions. Based in the Greater Philadelphia region. Strengths-based, direct, and built on questions more than answers.",
+      areaServed: "Greater Philadelphia Region",
+      url: "https://mattsprang.com/coaching",
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What does coaching with Matt Sprang look like?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Sessions are typically conducted by phone or video. Engagements usually run three to six months, with sessions every two to three weeks. Every session ends with something the client generated — an intention, an experiment, a commitment. Not an assignment. Something they chose.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Who does Matt coach?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Matt works with young professionals, typically in their late 20s and 30s, who are growing into leadership and want to do it with intention. He also works with business owners and executives navigating transitions, bottlenecks, or the gap between where they are and where they want to be.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What makes Matt's coaching different?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Matt is not coaching from theory. He spent 25 years developing young leaders directly and 16 years as an Owner and CEO who survived an $800,000 construction debt and grew a business from $50,000 to $1.2 million before selling it for seven figures; that specific set of experiences, including crisis, succession, and letting go, informs every conversation.",
+          },
+        },
+      ],
+    },
+  ],
 };
 
 export default function Coaching() {
   return (
     <>
+      <Script
+        id="schema-coaching"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+      />
+
       {/* Hero */}
       <section className="texture bg-off-white border-b border-[#e2ddd8]">
         <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
@@ -55,7 +111,7 @@ export default function Coaching() {
           <div>
             <Image
               src="/images/matt-outdoor.jpg"
-              alt="Matt Sprang, coach"
+              alt="Matt Sprang, leadership coach based in the Greater Philadelphia region"
               width={600}
               height={500}
               className="w-full h-auto object-cover"
@@ -73,7 +129,7 @@ export default function Coaching() {
         </div>
       </section>
 
-      {/* Who this is for */}
+      {/* Who this is for + What Matt brings */}
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -106,21 +162,104 @@ export default function Coaching() {
               <div className="space-y-4 text-body-text text-sm leading-relaxed">
                 <p>
                   Twenty-five years working directly with younger associates
-                  during their most formative years. Sixteen years as a CEO
-                  leading a staff of 45, through daily operations and through
-                  genuine crisis.
+                  during their most formative years, and sixteen years as an
+                  Owner and CEO leading a staff of 45 through daily operations
+                  and genuine crisis, including an $800,000 construction debt
+                  that could have ended everything.
                 </p>
                 <p>
-                  More than 200 facilitated events. A 9.4 average participant
-                  rating. Formal training in the XChange Approach, rooted in
+                  More than 200 facilitated events, a 9.4 average participant
+                  rating, and formal training in the XChange Approach, rooted in
                   Appreciative Inquiry.
                 </p>
                 <p>
-                  He is not coaching from theory. He is coaching from a specific
-                  set of days in a specific life.
+                  He is not coaching from theory; he is coaching from a specific
+                  set of days in a specific life, and that experience, building
+                  something from $50,000 to $1.2 million, nearly losing it, and
+                  choosing to sell it, informs every conversation he has with a
+                  client.
+                </p>
+                <p>
+                  <Link
+                    href="/about"
+                    className="text-colonial-blue hover:text-colonial-dark transition-colors duration-200"
+                  >
+                    Read more about Matt&apos;s background
+                  </Link>
+                  .
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What coaching looks like */}
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <div>
+            <div className="section-rule" />
+            <h2 className="font-serif text-3xl text-charcoal mb-6">
+              What coaching looks like
+            </h2>
+          </div>
+          <div className="space-y-5 text-body-text leading-relaxed">
+            <p>
+              Sessions happen by phone or video, typically every two to three
+              weeks. Most engagements run three to six months, though some
+              clients work with Matt longer. There is no fixed program.
+            </p>
+            <p>
+              The question Matt asks most often is one most people have never
+              been asked directly. It is not complicated. And the answer to it
+              tends to change the direction of the work immediately.
+            </p>
+            <div
+              className="border-l-2 pl-6 py-2"
+              style={{ borderLeftColor: "#81a2b6" }}
+            >
+              <p className="text-body-text text-sm leading-relaxed italic">
+                This is not accountability check-ins. It is not goal-setting
+                templates. It is not a program you complete. It is a specific
+                kind of conversation that happens when someone is ready to stop
+                circling the same problem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-off-white py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="section-rule" />
+          <h2 className="font-serif text-3xl text-charcoal mb-10">
+            Common questions
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                q: "What does a typical session look like?",
+                a: "Sessions run by phone or video, usually 60 minutes, every two to three weeks. Every session ends with something the client generated — an intention, an experiment, a commitment. Not an assignment. Something they chose.",
+              },
+              {
+                q: "How long is a typical engagement?",
+                a: "Most engagements run three to six months. Some clients work with Matt longer. There is no minimum, and there is no program to complete. The work ends when the client is ready for it to end.",
+              },
+              {
+                q: "How is this different from therapy or consulting?",
+                a: "Coaching is not therapy. It does not dig into the past to explain the present. It is also not consulting — Matt is not going to tell you what to do. He is going to ask the right questions until you know what you are going to do.",
+              },
+              {
+                q: "Do you work with clients outside Greater Philadelphia?",
+                a: "Yes. Most coaching happens by phone or video, so geography is not a constraint. Matt is based in Southern New Jersey and works with clients across the country.",
+              },
+            ].map(({ q, a }) => (
+              <div key={q} className="border-t border-[#e2ddd8] pt-6">
+                <h3 className="font-serif text-lg text-charcoal mb-3">{q}</h3>
+                <p className="text-body-text text-sm leading-relaxed">{a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
