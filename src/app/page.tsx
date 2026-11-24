@@ -62,30 +62,33 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
       />
 
-      {/* Full-bleed hero */}
-      <section className="relative min-h-screen flex items-end">
-        <Image
-          src="/images/matt-hero.jpg"
-          alt="Matt Sprang, business coach"
-          fill
-          className="object-cover object-center"
-          style={{ objectPosition: "50% 20%" }}
-          priority
-        />
-        {/* Gradient overlay — dark at bottom, fades to clear at top */}
-        <div className="hero-overlay absolute inset-0" />
+      {/* Hero — dark split layout */}
+      <section className="relative min-h-screen bg-[#111110] flex items-center overflow-hidden">
+        {/* Photo — right side, ~30% of viewport width */}
+        <div className="absolute right-0 top-0 bottom-0 w-[30%]">
+          <Image
+            src="/images/matt-hero.jpg"
+            alt="Matt Sprang, business coach"
+            fill
+            className="object-cover"
+            style={{ objectPosition: "50% 15%" }}
+            priority
+          />
+          {/* Blend left edge into dark background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#111110] via-[#111110]/30 to-transparent" />
+        </div>
 
-        {/* Hero content anchored bottom-left */}
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pb-16 md:pb-24">
+        {/* Hero content — left side */}
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pt-24 pb-16 md:pb-24">
           <p className="text-colonial-blue uppercase tracking-widest text-xs md:text-sm mb-4 font-semibold">
             Small Business Coaching · Greater Philadelphia
           </p>
-          <h1 className="font-serif text-5xl md:text-7xl text-white leading-tight mb-6 max-w-3xl">
+          <h1 className="font-serif text-5xl md:text-7xl text-white leading-tight mb-6 max-w-2xl">
             Grow your business.
             <br />
             Not your hours.
           </h1>
-          <p className="text-white/80 text-lg md:text-xl mb-8 max-w-xl leading-relaxed">
+          <p className="text-white/70 text-lg md:text-xl mb-8 max-w-lg leading-relaxed">
             I coach small business owners to grow revenue, profit, and company
             value — while taking work off your plate.
           </p>
