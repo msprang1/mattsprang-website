@@ -20,7 +20,6 @@ export async function POST(req: Request) {
     !email ||
     !businessName ||
     !businessWebsite ||
-    !linkedin ||
     !industry ||
     !yearsInBusiness ||
     !annualRevenue

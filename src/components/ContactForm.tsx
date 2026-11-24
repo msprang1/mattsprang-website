@@ -157,25 +157,25 @@ export default function ContactForm() {
           <input
             id="businessWebsite"
             name="businessWebsite"
-            type="url"
+            type="text"
             required
             className={inputClass}
-            placeholder="https://yourbusiness.com"
+            placeholder="yourbusiness.com"
           />
         </div>
       </div>
 
       <div>
         <label htmlFor="linkedin" className={labelClass}>
-          Your LinkedIn profile
+          Your LinkedIn profile{" "}
+          <span className="text-light-gray font-normal">(optional)</span>
         </label>
         <input
           id="linkedin"
           name="linkedin"
-          type="url"
-          required
+          type="text"
           className={inputClass}
-          placeholder="https://linkedin.com/in/yourprofile"
+          placeholder="linkedin.com/in/yourprofile"
         />
       </div>
 
