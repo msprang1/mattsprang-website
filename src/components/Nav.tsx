@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -12,18 +12,36 @@ const navLinks = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  useEffect(() => {
+    if (!isHome) return;
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [isHome]);
+
+  const transparent = isHome && !scrolled;
 
   return (
     <header
-      className="sticky top-0 z-50 bg-off-white border-b border-[#e2ddd8]"
-      style={{ backgroundColor: "#f7f5f2" }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        transparent
+          ? "bg-transparent border-transparent"
+          : "bg-off-white border-b border-[#e2ddd8]"
+      }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Wordmark */}
         <Link
           href="/"
-          className="font-serif text-xl text-charcoal tracking-wide hover:text-colonial-blue transition-colors duration-200"
+          className={`font-serif text-xl tracking-wide transition-colors duration-200 ${
+            transparent
+              ? "text-white hover:text-white/80"
+              : "text-charcoal hover:text-colonial-blue"
+          }`}
         >
           Matt Sprang
         </Link>
@@ -35,9 +53,13 @@ export default function Nav() {
               key={href}
               href={href}
               className={`text-sm tracking-wide transition-colors duration-200 ${
-                pathname === href
-                  ? "text-colonial-blue font-semibold"
-                  : "text-body-text hover:text-charcoal"
+                transparent
+                  ? pathname === href
+                    ? "text-white font-semibold"
+                    : "text-white/80 hover:text-white"
+                  : pathname === href
+                    ? "text-colonial-blue font-semibold"
+                    : "text-body-text hover:text-charcoal"
               }`}
             >
               {label}
@@ -52,13 +74,19 @@ export default function Nav() {
           aria-label="Toggle menu"
         >
           <span
-            className={`block w-5 h-0.5 bg-charcoal transition-transform duration-200 ${open ? "rotate-45 translate-y-2" : ""}`}
+            className={`block w-5 h-0.5 transition-all duration-200 ${
+              transparent ? "bg-white" : "bg-charcoal"
+            } ${open ? "rotate-45 translate-y-2" : ""}`}
           />
           <span
-            className={`block w-5 h-0.5 bg-charcoal transition-opacity duration-200 ${open ? "opacity-0" : ""}`}
+            className={`block w-5 h-0.5 transition-all duration-200 ${
+              transparent ? "bg-white" : "bg-charcoal"
+            } ${open ? "opacity-0" : ""}`}
           />
           <span
-            className={`block w-5 h-0.5 bg-charcoal transition-transform duration-200 ${open ? "-rotate-45 -translate-y-2" : ""}`}
+            className={`block w-5 h-0.5 transition-all duration-200 ${
+              transparent ? "bg-white" : "bg-charcoal"
+            } ${open ? "-rotate-45 -translate-y-2" : ""}`}
           />
         </button>
       </div>

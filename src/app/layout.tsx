@@ -19,11 +19,12 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   title: {
-    default: "Matt Sprang | Speaker, Leadership Development & Coaching",
+    default:
+      "Matt Sprang | Coaching for Small Business Owners | Greater Philadelphia",
     template: "%s | Matt Sprang",
   },
   description:
-    "Most organizations invest in the leaders they already have. Almost none invest in the ones they are going to need. Matt Sprang works with organizations and individuals to change that.",
+    "I coach small business owners to grow revenue, profit, and company value — without giving the business more of themselves. Founder. Built to $1.2M and sold for seven figures in 2024.",
   metadataBase: new URL("https://mattsprang.com"),
   openGraph: {
     type: "website",

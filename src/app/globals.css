@@ -18,6 +18,7 @@ html {
 body {
   background-color: var(--off-white);
   color: var(--body-text);
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -44,7 +45,17 @@ h6 {
 p,
 li,
 blockquote {
-  line-height: 1.75;
+  line-height: 1.8;
+}
+
+/* Full-bleed hero gradient overlay */
+.hero-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.45) 45%,
+    rgba(0, 0, 0, 0.12) 100%
+  );
 }
 
 /* Credibility strip */

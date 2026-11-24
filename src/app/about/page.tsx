@@ -71,7 +71,7 @@ export default function About() {
       />
 
       {/* Hero */}
-      <section className="texture bg-off-white border-b border-[#e2ddd8]">
+      <section className="texture bg-off-white border-b border-[#e2ddd8] pt-16">
         <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
@@ -118,32 +118,31 @@ export default function About() {
           <div className="space-y-5 text-body-text leading-relaxed">
             <p>
               In 2008, I founded Greater Philadelphia Aquatic Enterprises. Over
-              16 years, I grew it from zero to $1.2 million in revenue and 47
-              employees, and in 2024 I sold it for seven figures.
+              16 years, I grew it from zero to $1.2M in revenue and 47
+              employees. In 2024, I sold it for seven figures.
             </p>
             <p>
-              It wasn&apos;t a straight line. An $800,000 construction debt
-              brought us close to bankruptcy, and for two years I tried to
-              control everything and carry it alone. What got us through was
-              learning to shift from control to influence: trusting my team,
-              letting go of decisions that didn&apos;t need me, and focusing on
-              the work only I could do.
+              It wasn&apos;t a straight line. An $800K construction debt brought
+              us to the edge of bankruptcy. For two years I tried to control
+              everything and carry it alone. What got us through wasn&apos;t
+              harder work — it was learning to shift from control to influence.
+              Trusting the team. Letting go of decisions that didn&apos;t need
+              me. Focusing on what only I could do.
             </p>
             <p>
               That&apos;s the work I do with owners now. Your business should be
-              an asset that serves your life, not a job you can never step away
+              an asset that serves your life — not a job you can never step away
               from.
             </p>
             <p>
-              Before and during all of that, I spent 25 years coaching swimmers,
-              some to the highest levels of the sport, learning how to help
-              people commit to goals that feel impossible and build the habits
-              to reach them.
+              I also spent 25 years coaching competitive swimmers, some to the
+              highest levels of the sport. That&apos;s where I learned how to
+              help people commit to hard goals and build the habits to reach
+              them.
             </p>
             <p>
-              I&apos;m a family man first. I&apos;m married with two children,
-              and I work hard to be present for them. I&apos;m also Director of
-              Online Events for Front Row Dads.
+              I&apos;m married with two kids. I work hard to be present for
+              them. I&apos;m also Director of Online Events for Front Row Dads.
             </p>
           </div>
         </div>

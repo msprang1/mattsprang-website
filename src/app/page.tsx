@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title:
     "Matt Sprang | Coaching for Small Business Owners | Greater Philadelphia",
   description:
-    "I coach established small business owners to grow revenue, profit, and the value of their company without giving the business more of themselves. Founder. Built a business to $1.2M and sold it in 2024.",
+    "I coach small business owners to grow revenue, profit, and company value — without giving the business more of themselves. Founder. Built to $1.2M and sold for seven figures in 2024.",
 };
 
 const schemaOrg = {
@@ -32,8 +32,6 @@ const schemaOrg = {
         "Revenue Growth",
         "Business Exit",
         "Entrepreneurship",
-        "Appreciative Inquiry",
-        "XChange Approach",
       ],
     },
     {
@@ -41,7 +39,7 @@ const schemaOrg = {
       "@id": "https://mattsprang.com/#service",
       name: "Matt Sprang Coaching",
       description:
-        "Coaching for established small business owners in the Greater Philadelphia region who want to grow revenue, profit, and the value of their company without giving the business more of themselves.",
+        "Coaching for small business owners in the Greater Philadelphia region who want to grow revenue, profit, and company value without giving the business more of themselves.",
       url: "https://mattsprang.com",
       email: "matt@mattsprang.com",
       areaServed: [
@@ -50,25 +48,7 @@ const schemaOrg = {
           name: "Greater Philadelphia Region",
         },
       ],
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 39.9526,
-        longitude: -75.1652,
-      },
       founder: { "@id": "https://mattsprang.com/#person" },
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "Services",
-        itemListElement: [
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Small Business Coaching",
-            },
-          },
-        ],
-      },
     },
   ],
 };
@@ -82,124 +62,107 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
       />
 
-      {/* Hero */}
-      <section className="texture bg-off-white">
-        <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-            {/* Left: copy */}
-            <div className="animate-fade-up order-2 md:order-1">
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-[3.25rem] text-charcoal mb-5 leading-tight">
-                Grow your business without giving it more of you.
-              </h1>
-              <p className="text-lg font-light text-body-text mb-8 leading-relaxed">
-                I coach established small business owners in the Greater
-                Philadelphia region to grow revenue, profit, and the value of
-                their company, while taking work off their plate.
-              </p>
-              <Link
-                href="/contact"
-                className="btn-primary inline-block bg-charcoal text-white text-sm tracking-wide px-8 py-3.5 hover:bg-[#3d3d3b] transition-colors duration-200"
-              >
-                Start a conversation &rarr;
-              </Link>
-            </div>
+      {/* Full-bleed hero */}
+      <section className="relative min-h-screen flex items-end">
+        <Image
+          src="/images/matt-hero.jpg"
+          alt="Matt Sprang, business coach"
+          fill
+          className="object-cover object-top"
+          priority
+        />
+        {/* Gradient overlay — dark at bottom, fades to clear at top */}
+        <div className="hero-overlay absolute inset-0" />
 
-            {/* Right: photo */}
-            <div className="order-1 md:order-2 animate-fade-in">
-              <div className="relative">
-                <div
-                  className="absolute -top-3 -right-3 w-full h-full"
-                  style={{
-                    backgroundColor: "#81a2b6",
-                    opacity: 0.15,
-                    zIndex: 0,
-                  }}
-                />
-                <div className="relative z-10">
-                  <Image
-                    src="/images/matt-hero.jpg"
-                    alt="Matt Sprang, business coach, Greater Philadelphia region"
-                    width={600}
-                    height={750}
-                    className="w-full h-auto object-cover"
-                    priority
-                    style={{
-                      maxHeight: "580px",
-                      objectFit: "cover",
-                      objectPosition: "top center",
-                    }}
-                  />
-                </div>
-                <div
-                  className="h-1.5 w-full"
-                  style={{ backgroundColor: "#81a2b6" }}
-                />
-              </div>
-            </div>
-          </div>
+        {/* Hero content anchored bottom-left */}
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pb-16 md:pb-24">
+          <p className="text-colonial-blue uppercase tracking-widest text-xs md:text-sm mb-4 font-semibold">
+            Small Business Coaching · Greater Philadelphia
+          </p>
+          <h1 className="font-serif text-5xl md:text-7xl text-white leading-tight mb-6 max-w-3xl">
+            Grow your business.
+            <br />
+            Not your hours.
+          </h1>
+          <p className="text-white/80 text-lg md:text-xl mb-8 max-w-xl leading-relaxed">
+            I coach small business owners to grow revenue, profit, and company
+            value — while taking work off your plate.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block bg-white text-charcoal text-sm font-semibold tracking-wide px-8 py-4 hover:bg-off-white transition-colors duration-200"
+          >
+            Start a conversation &rarr;
+          </Link>
         </div>
       </section>
 
       {/* Stats strip */}
-      <section className="credibility-strip bg-white">
-        <div className="max-w-6xl mx-auto px-6 py-6">
-          <div className="flex flex-wrap justify-center md:justify-between items-center gap-4 md:gap-0">
+      <section className="bg-charcoal">
+        <div className="max-w-6xl mx-auto px-6 py-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              "Founder: built to $1.2M and 47 employees",
-              "Sold for seven figures in 2024",
-              "25 years coaching athletes",
-              "200+ facilitated events, 9.3 average rating",
-            ].map((item, i) => (
-              <span
-                key={i}
-                className="text-xs uppercase tracking-widest text-light-gray text-center"
-              >
-                {item}
-              </span>
+              { number: "$1.2M", label: "Revenue at peak" },
+              { number: "47", label: "Employees at exit" },
+              { number: "7-fig", label: "Sold in 2024" },
+              { number: "25 yrs", label: "Coaching experience" },
+            ].map(({ number, label }) => (
+              <div key={label} className="text-center md:text-left">
+                <p className="font-serif text-4xl md:text-5xl text-white mb-1">
+                  {number}
+                </p>
+                <p className="text-white/50 text-xs uppercase tracking-widest">
+                  {label}
+                </p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* You built something real */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          <div>
-            <div className="section-rule" />
-            <h2 className="font-serif text-3xl text-charcoal mb-6">
-              You built something real.
-            </h2>
-          </div>
-          <div className="space-y-5 text-body-text leading-relaxed">
-            <p>
-              You&apos;ve been in business long enough to know the model works.
-              The customers are there. The team is there. But somewhere along
-              the way, the business started running through you. Every decision.
-              Every problem. Every next step.
-            </p>
-            <p>
-              Growing it shouldn&apos;t mean giving it more of your hours, your
-              weekends, or your family&apos;s time. I work with owners who want
-              more from their business, but not at any cost.
-            </p>
-          </div>
+      {/* You built something real — full-width dark */}
+      <section className="bg-[#1a1a18] py-20 md:py-28">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="text-colonial-blue uppercase tracking-widest text-xs mb-8">
+            Sound familiar?
+          </p>
+          <blockquote className="font-serif text-3xl md:text-5xl text-white leading-tight mb-8">
+            &ldquo;I built something real. So why does it still run through me
+            for every single decision?&rdquo;
+          </blockquote>
+          <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">
+            You&apos;ve been in business long enough to know the model works.
+            Customers are there. The team is there. But growth stopped meaning
+            freedom a long time ago.
+          </p>
+          <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed mt-5">
+            That&apos;s the problem I fix.
+          </p>
         </div>
       </section>
 
       {/* What growth looks like */}
-      <section className="bg-white py-16">
+      <section className="bg-off-white py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="section-rule" />
-          <h2 className="font-serif text-3xl text-charcoal mb-10">
-            What growth looks like
-          </h2>
+          <div className="mb-12">
+            <div className="section-rule" />
+            <h2 className="font-serif text-3xl md:text-4xl text-charcoal">
+              What growth looks like
+            </h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { label: "More revenue.", body: null },
-              { label: "Greater profit.", body: null },
+              {
+                label: "More revenue.",
+                body: "You grow the top line without throwing more people or hours at the problem.",
+              },
+              {
+                label: "Greater profit.",
+                body: "Revenue is vanity. Profit is what you actually keep.",
+              },
               {
                 label: "Less on your plate.",
-                body: "You spend your time on what you love and do best, whether that’s sales, systems, or the beach.",
+                body: "You spend your time on what you love and do best — whether that&apos;s sales, strategy, or the beach.",
               },
               {
                 label: "A business worth more.",
@@ -208,15 +171,14 @@ export default function Home() {
             ].map(({ label, body }) => (
               <div
                 key={label}
-                className="border border-[#e2ddd8] bg-off-white p-6"
+                className="bg-white border border-[#e2ddd8] p-8"
                 style={{ borderTopWidth: "3px", borderTopColor: "#81a2b6" }}
               >
-                <p className="font-semibold text-charcoal mb-1">{label}</p>
-                {body && (
-                  <p className="text-body-text text-sm leading-relaxed">
-                    {body}
-                  </p>
-                )}
+                <p className="font-serif text-xl text-charcoal mb-3">{label}</p>
+                <p
+                  className="text-body-text leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: body }}
+                />
               </div>
             ))}
           </div>
@@ -224,96 +186,112 @@ export default function Home() {
       </section>
 
       {/* How we work together */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          <div>
-            <div className="section-rule" />
-            <h2 className="font-serif text-3xl text-charcoal mb-6">
-              How we work together
-            </h2>
-            <p className="text-body-text leading-relaxed">
-              Your business goals run through you. So we start with you.
-            </p>
-          </div>
-          <div className="space-y-5">
-            {[
-              {
-                label: "Discover.",
-                body: "Who you are, what drives you, and what you really want for your business and your life.",
-              },
-              {
-                label: "Realign.",
-                body: "We reshape the goals for your business around what you actually want.",
-              },
-              {
-                label: "Execute.",
-                body: "We go after those goals with clear focus, starting with a quick win and stacking from there.",
-              },
-              {
-                label: "Sustain.",
-                body: "We build the business to keep growing without you carrying all of it.",
-              },
-            ].map(({ label, body }) => (
-              <div key={label} className="flex items-start gap-4">
-                <span
-                  className="text-colonial-blue mt-1.5 flex-shrink-0"
-                  aria-hidden="true"
-                >
-                  &#9670;
-                </span>
-                <p className="text-body-text leading-relaxed">
-                  <strong className="text-charcoal">{label}</strong> {body}
-                </p>
-              </div>
-            ))}
+      <section className="bg-white py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+            <div>
+              <div className="section-rule" />
+              <h2 className="font-serif text-3xl md:text-4xl text-charcoal mb-6">
+                How we work together
+              </h2>
+              <p className="text-body-text leading-relaxed text-lg">
+                Your business goals run through you. So we start there.
+              </p>
+            </div>
+            <div className="space-y-8">
+              {[
+                {
+                  number: "01",
+                  label: "Discover.",
+                  body: "Who you are, what drives you, and what you really want for your business and your life.",
+                },
+                {
+                  number: "02",
+                  label: "Realign.",
+                  body: "We reshape the goals around what you actually want — not what you think you should want.",
+                },
+                {
+                  number: "03",
+                  label: "Execute.",
+                  body: "We go after those goals with clear focus. Start with a quick win. Stack from there.",
+                },
+                {
+                  number: "04",
+                  label: "Sustain.",
+                  body: "We build the business to keep growing without you carrying all of it.",
+                },
+              ].map(({ number, label, body }) => (
+                <div key={label} className="flex items-start gap-6">
+                  <span className="font-serif text-3xl text-colonial-blue/40 leading-none flex-shrink-0 mt-1">
+                    {number}
+                  </span>
+                  <p className="text-body-text leading-relaxed">
+                    <strong className="text-charcoal font-semibold">
+                      {label}
+                    </strong>{" "}
+                    {body}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Who I work with */}
-      <section className="bg-off-white py-16">
+      <section className="bg-charcoal py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="max-w-2xl">
-            <div className="section-rule" />
-            <h2 className="font-serif text-3xl text-charcoal mb-6">
-              Who I work with
+          <div className="max-w-3xl">
+            <p className="text-colonial-blue uppercase tracking-widest text-xs mb-6">
+              Is this you?
+            </p>
+            <h2 className="font-serif text-3xl md:text-5xl text-white mb-8 leading-tight">
+              You run an established business. You&apos;re doing fine. You want
+              to do better.
             </h2>
-            <p className="text-body-text leading-relaxed mb-8">
-              Owners and founders of established businesses, three or more years
-              in, generating up to about $3 million a year, who are ready to do
-              the work. Primarily in the Greater Philadelphia region.
+            <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-2xl">
+              I work with owners and founders three or more years in, generating
+              up to about $3M a year, who are ready to do the work. Primarily in
+              the Greater Philadelphia region.
             </p>
             <Link
               href="/contact"
-              className="btn-primary inline-block bg-charcoal text-white text-sm tracking-wide px-8 py-3.5 hover:bg-[#3d3d3b] transition-colors duration-200"
+              className="inline-block border border-white text-white text-sm font-semibold tracking-wide px-8 py-4 hover:bg-white hover:text-charcoal transition-colors duration-200"
             >
-              Start a conversation &rarr;
+              Let&apos;s talk &rarr;
             </Link>
           </div>
         </div>
       </section>
 
       {/* About me short */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          <div>
-            <div className="section-rule" />
-            <h2 className="font-serif text-3xl text-charcoal mb-6">About me</h2>
-          </div>
-          <div className="space-y-5 text-body-text leading-relaxed">
-            <p>
-              I&apos;m Matt Sprang. I founded a business from zero, grew it to
-              $1.2 million in revenue and 47 employees, survived an $800,000
-              construction debt that nearly ended it, and sold it for seven
-              figures in 2024. Now I help owners build the kind of business I
-              wish I&apos;d built sooner.
-            </p>
-            <Link
-              href="/about"
-              className="inline-block text-sm tracking-wide text-colonial-blue hover:text-colonial-dark transition-colors duration-200"
-            >
-              More about me &rarr;
-            </Link>
+      <section className="bg-off-white py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div>
+              <div className="section-rule" />
+              <h2 className="font-serif text-3xl md:text-4xl text-charcoal mb-6">
+                I&apos;ve been where you are.
+              </h2>
+            </div>
+            <div className="space-y-5 text-body-text leading-relaxed">
+              <p>
+                I&apos;m Matt Sprang. I founded a business from zero, grew it to
+                $1.2M in revenue and 47 employees, survived an $800K
+                construction debt that nearly ended it, and sold it for seven
+                figures in 2024.
+              </p>
+              <p>
+                Now I help owners build the kind of business I wish I&apos;d
+                built sooner.
+              </p>
+              <Link
+                href="/about"
+                className="inline-block text-sm tracking-wide text-colonial-blue hover:text-colonial-dark transition-colors duration-200 font-semibold"
+              >
+                More about me &rarr;
+              </Link>
+            </div>
           </div>
         </div>
       </section>

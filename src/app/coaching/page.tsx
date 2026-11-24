@@ -35,7 +35,7 @@ export default function Coaching() {
       />
 
       {/* Hero */}
-      <section className="texture bg-off-white border-b border-[#e2ddd8]">
+      <section className="texture bg-off-white border-b border-[#e2ddd8] pt-16">
         <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
           <div className="max-w-2xl">
             <p className="text-xs uppercase tracking-widest text-colonial-blue mb-5 font-semibold">
@@ -55,13 +55,13 @@ export default function Coaching() {
           <div className="space-y-5 text-body-text leading-relaxed">
             <p>
               Most owners I meet are doing fine on paper. But when I ask,
-              &ldquo;How is it really going?&rdquo;, the answer changes. Growth
-              has slowed, or it&apos;s come at the cost of more hours, more
+              &ldquo;How is it really going?&rdquo; — the answer changes. Growth
+              has slowed. Or it&apos;s come at the cost of more hours, more
               decisions, and less time for everything else.
             </p>
             <p>
-              I coach the owner first, because the business runs through you.
-              Then we work on the business together.
+              I coach the owner first. The business runs through you. So
+              that&apos;s where we start. Then we work on the business together.
             </p>
           </div>
 
