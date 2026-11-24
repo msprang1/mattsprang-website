@@ -68,7 +68,8 @@ export default function Home() {
           src="/images/matt-hero.jpg"
           alt="Matt Sprang, business coach"
           fill
-          className="object-cover object-top"
+          className="object-cover object-center"
+          style={{ objectPosition: "50% 20%" }}
           priority
         />
         {/* Gradient overlay — dark at bottom, fades to clear at top */}
