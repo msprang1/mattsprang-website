@@ -42,6 +42,12 @@ export default function ContactForm() {
       annualRevenue: (
         form.elements.namedItem("annualRevenue") as HTMLSelectElement
       ).value,
+      preferredContact:
+        (
+          form.querySelector(
+            'input[name="preferredContact"]:checked',
+          ) as HTMLInputElement
+        )?.value ?? "email",
     };
 
     try {
@@ -123,17 +129,40 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div>
-        <label htmlFor="phone" className={labelClass}>
-          Phone <span className="text-light-gray font-normal">(optional)</span>
-        </label>
-        <input
-          id="phone"
-          name="phone"
-          type="tel"
-          className={inputClass}
-          placeholder="(555) 000-0000"
-        />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div>
+          <label htmlFor="phone" className={labelClass}>
+            Phone{" "}
+            <span className="text-light-gray font-normal">(optional)</span>
+          </label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            className={inputClass}
+            placeholder="(555) 000-0000"
+          />
+        </div>
+        <div>
+          <p className={labelClass}>Preferred contact method</p>
+          <div className="flex gap-6 pt-3">
+            {["Email", "Phone"].map((opt) => (
+              <label
+                key={opt}
+                className="flex items-center gap-2 cursor-pointer text-sm text-charcoal"
+              >
+                <input
+                  type="radio"
+                  name="preferredContact"
+                  value={opt.toLowerCase()}
+                  defaultChecked={opt === "Email"}
+                  className="accent-charcoal"
+                />
+                {opt}
+              </label>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

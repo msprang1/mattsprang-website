@@ -13,6 +13,7 @@ export async function POST(req: Request) {
     industry,
     yearsInBusiness,
     annualRevenue,
+    preferredContact,
   } = await req.json();
 
   if (
@@ -34,6 +35,7 @@ export async function POST(req: Request) {
     `Name: ${name}`,
     `Email: ${email}`,
     `Phone: ${phone || "Not provided"}`,
+    `Preferred contact: ${preferredContact || "email"}`,
     `Business name: ${businessName}`,
     `Business website: ${businessWebsite}`,
     `LinkedIn: ${linkedin}`,
