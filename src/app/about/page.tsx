@@ -5,9 +5,9 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title:
-    "About Matt Sprang | Speaker, Leadership Development & Coaching | Greater Philadelphia",
+    "About Matt Sprang | Coach for Small Business Owners | Greater Philadelphia",
   description:
-    "Matt Sprang is a leadership development professional, speaker, and coach based in the Greater Philadelphia region. Former Owner and CEO. 25 years developing young leaders. Seven-figure exit in 2024.",
+    "Founder who built a business from zero to $1.2M and 47 employees and sold it in 2024. Husband, father of two, and coach to small business owners in the Greater Philadelphia region.",
 };
 
 const schemaOrg = {
@@ -15,12 +15,11 @@ const schemaOrg = {
   "@type": "Person",
   "@id": "https://mattsprang.com/#person",
   name: "Matt Sprang",
-  jobTitle: "Leadership Development Professional, Speaker & Coach",
+  jobTitle: "Business Coach",
   description:
-    "Matt Sprang is a leadership development professional, speaker, and coach based in Southern New Jersey, serving the Greater Philadelphia region. He works with organizations that employ Millennial and Gen Z workers and want to develop them into the leaders the organization is going to need.",
+    "Founder who built a business from zero to $1.2M and 47 employees and sold it in 2024. Coach to small business owners in the Greater Philadelphia region.",
   url: "https://mattsprang.com",
   email: "matt@mattsprang.com",
-  telephone: "+16098207946",
   address: {
     "@type": "PostalAddress",
     addressRegion: "NJ",
@@ -30,22 +29,34 @@ const schemaOrg = {
   sameAs: [
     "https://www.linkedin.com/in/matt-sprang/",
     "https://matthewsprang.substack.com",
+    "https://www.instagram.com/matt_sprang_coaching/",
+    "https://www.youtube.com/@msprang",
   ],
   knowsAbout: [
-    "Leadership Development",
-    "Talent Development",
-    "Millennial and Gen Z Workforce",
-    "Executive Coaching",
+    "Small Business Coaching",
+    "Business Growth",
+    "Revenue Growth",
+    "Business Exit",
+    "Entrepreneurship",
     "Appreciative Inquiry",
     "XChange Approach",
-    "Business Growth",
-    "Organizational Development",
+    "Athletic Coaching",
   ],
   alumniOf: [
     {
       "@type": "Organization",
       name: "Greater Philadelphia Aquatic Enterprises",
-      description: "Founder, Owner and CEO, 2008–2024",
+      description: "Founder and CEO, 2008–2024",
+    },
+    {
+      "@type": "EducationalOrganization",
+      name: "Temple University",
+      description: "M.S.Ed., Sports and Recreation Administration",
+    },
+    {
+      "@type": "EducationalOrganization",
+      name: "Rowan University",
+      description: "B.A., History",
     },
   ],
 };
@@ -68,28 +79,22 @@ export default function About() {
                 About
               </p>
               <h1 className="font-serif text-4xl md:text-5xl text-charcoal mb-6 leading-tight">
-                The short version: he built something, nearly lost it, and
-                learned what it actually takes to develop people who stay.
+                I&apos;ve been the owner everything runs through.
               </h1>
               <div className="section-rule" />
-              <p className="text-lg text-body-text leading-relaxed">
-                Matt Sprang is a leadership development professional, speaker,
-                and coach based in Southern New Jersey, serving the Greater
-                Philadelphia region and beyond.
-              </p>
             </div>
 
             <div className="relative">
               <Image
                 src="/images/matt-lifestyle-1.jpg"
-                alt="Matt Sprang, leadership development professional and speaker, Greater Philadelphia region"
+                alt="Matt Sprang, business coach, Greater Philadelphia region"
                 width={600}
                 height={600}
                 className="w-full h-auto object-cover"
                 style={{
                   maxHeight: "520px",
                   objectFit: "cover",
-                  objectPosition: "center",
+                  objectPosition: "center top",
                 }}
               />
               <div
@@ -101,7 +106,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* The story */}
+      {/* Body */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div>
@@ -112,71 +117,43 @@ export default function About() {
           </div>
           <div className="space-y-5 text-body-text leading-relaxed">
             <p>
-              In 2008, at 30 years old, Matt Sprang took over Greater
-              Philadelphia Aquatic Enterprises; he inherited a program
-              generating roughly $150,000 in revenue and built it to $1.2
-              million over 16 years.
+              In 2008, I founded Greater Philadelphia Aquatic Enterprises. Over
+              16 years, I grew it from zero to $1.2 million in revenue and 47
+              employees, and in 2024 I sold it for seven figures.
             </p>
             <p>
-              For the next 16 years, he built it; by the time he sold it in 2024
-              for a seven-figure sum, the organization had grown to $1.2 million
-              in revenue and 45 employees. Along the way, he survived an
-              $800,000 construction debt that came close to ending everything,
-              and what he learned inside that crisis changed how he thinks about
-              organizations, pressure, and the people who hold things together
-              when things get hard.
+              It wasn&apos;t a straight line. An $800,000 construction debt
+              brought us close to bankruptcy, and for two years I tried to
+              control everything and carry it alone. What got us through was
+              learning to shift from control to influence: trusting my team,
+              letting go of decisions that didn&apos;t need me, and focusing on
+              the work only I could do.
             </p>
             <p>
-              Before any of that, and during all of it, Matt spent 25 years
-              coaching young athletes in their most formative years, convincing
-              teenagers to get into a cold pool at 5 a.m. three times a week
-              before school, helping them set goals that felt impossible and
-              build the habits to reach them, and learning how to develop
-              commitment, not just demand it.
+              That&apos;s the work I do with owners now. Your business should be
+              an asset that serves your life, not a job you can never step away
+              from.
             </p>
             <p>
-              That is the same work he does now, applied to organizations; the
-              athletes are different and so is the pool, but the question he is
-              always asking is the same: what does this person actually need in
-              order to become who they are capable of being?
+              Before and during all of that, I spent 25 years coaching swimmers,
+              some to the highest levels of the sport, learning how to help
+              people commit to goals that feel impossible and build the habits
+              to reach them.
+            </p>
+            <p>
+              I&apos;m a family man first. I&apos;m married with two children,
+              and I work hard to be present for them. I&apos;m also Director of
+              Online Events for Front Row Dads.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Why this work */}
+      {/* Photo + credentials */}
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
-            <div>
-              <div className="section-rule" />
-              <h2 className="font-serif text-3xl text-charcoal mb-6">
-                Why this work
-              </h2>
-            </div>
-            <div className="space-y-5 text-body-text leading-relaxed">
-              <p>
-                Most leadership development money goes to the people who already
-                have the title, while the people who are going to run the
-                organization in ten years sit in mid-level roles right now,
-                mostly figuring it out alone.
-              </p>
-              <p>
-                Matt has been on both sides of that; as a young leader without
-                much guidance and later as an Owner and CEO who had to figure
-                out how to develop 45 people while running a real business with
-                real debt and real pressure, he knows what gets lost when no one
-                invests in the middle of the org chart, and what becomes
-                possible when someone does.
-              </p>
-              <p>
-                He spent 25 years learning how to develop people who do not yet
-                know what they are capable of; that is not a generic coaching
-                skill but a specific one, built over a long time in conditions
-                that demanded it.
-              </p>
-            </div>
-            <div>
+            <div className="md:col-span-1">
               <Image
                 src="/images/matt-hiking.jpg"
                 alt="Matt Sprang"
@@ -186,7 +163,7 @@ export default function About() {
                 style={{
                   maxHeight: "400px",
                   objectFit: "cover",
-                  objectPosition: "center",
+                  objectPosition: "center top",
                 }}
               />
               <div
@@ -194,97 +171,48 @@ export default function About() {
                 style={{ backgroundColor: "#81a2b6" }}
               />
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* What makes it different */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          <div>
-            <div className="section-rule" />
-            <h2 className="font-serif text-3xl text-charcoal mb-6">
-              What makes it different
-            </h2>
-          </div>
-          <div className="space-y-5 text-body-text leading-relaxed">
-            <p>
-              Matt is a trained facilitator in the XChange Approach, a
-              methodology rooted in Appreciative Inquiry, drawing the
-              intelligence out of a room rather than depositing it from the
-              front; the work is not a lecture or a curriculum but a process of
-              helping people discover what they already know and build on it.
-            </p>
-            <p>
-              He has facilitated more than 200 events over six years, with an
-              average participant rating of 9.4 and a Net Promoter Score of 85,
-              and has spoken at Rowan University, Front Row Dads Live, and
-              organizations across the Greater Philadelphia region.
-            </p>
-            <p>
-              He is not coaching or consulting from theory; every framework he
-              uses has been tested in a real organization, under real pressure,
-              with real stakes, and that is what he brings into every room.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Credentials strip */}
-      <section className="bg-off-white py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <p className="text-xs uppercase tracking-widest text-colonial-blue mb-8 font-semibold">
-            Credentials
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
-            {[
-              "25 years developing young leaders directly",
-              "200+ facilitated events, 9.4 average rating, NPS of 85",
-              "Trained facilitator, XChange Approach (Appreciative Inquiry)",
-              "Founder, Owner and CEO, Greater Philadelphia Aquatic Enterprises",
-              "Founded and grew from $50K to $1.2M over 16 years",
-              "Seven-figure business exit, 2024",
-              "Featured speaker, Front Row Dads Live (December 2024)",
-              "Keynote speaker, Rowan University Seniors of Distinction (April 2026)",
-            ].map((item) => (
-              <div key={item} className="flex items-start gap-3">
-                <span className="text-colonial-blue mt-1.5 flex-shrink-0">
-                  &#9670;
-                </span>
-                <p className="text-body-text text-sm leading-relaxed">{item}</p>
+            <div className="md:col-span-2">
+              <div className="section-rule" />
+              <h2 className="font-serif text-3xl text-charcoal mb-8">
+                Credentials
+              </h2>
+              <div className="grid grid-cols-1 gap-y-3">
+                {[
+                  "Founder, Greater Philadelphia Aquatic Enterprises (2008–2024)",
+                  "Grew to $1.2M in revenue and 47 employees; sold for seven figures in 2024",
+                  "25 years coaching athletes",
+                  "200+ facilitated events, 9.3 average rating, Net Promoter Score of 85",
+                  "Trained facilitator, XChange Approach (Appreciative Inquiry)",
+                  "Director of Online Events, Front Row Dads",
+                  "M.S.Ed., Sports and Recreation Administration, Temple University",
+                  "B.A., History, Rowan University",
+                ].map((item) => (
+                  <div key={item} className="flex items-start gap-3">
+                    <span className="text-colonial-blue mt-1.5 flex-shrink-0">
+                      &#9670;
+                    </span>
+                    <p className="text-body-text text-sm leading-relaxed">
+                      {item}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Curiosity close */}
+      {/* CTA */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="max-w-2xl">
           <div className="section-rule" />
-          <p className="font-serif text-2xl text-charcoal mb-6 leading-snug">
-            He spent 16 years building something from $50,000 to $1.2 million,
-            survived a crisis that should have ended it, and then sold it; what
-            he learned in those years about developing people is not in any book
-            he has ever read.
-          </p>
-          <p className="text-body-text leading-relaxed mb-8">
-            Read how Matt approaches the work, or start with a conversation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/talent-development"
-              className="btn-primary inline-block bg-charcoal text-white text-sm tracking-wide px-8 py-3.5 hover:bg-[#3d3d3b] transition-colors duration-200"
-            >
-              Talent development programs
-            </Link>
-            <Link
-              href="/coaching"
-              className="inline-block text-sm tracking-wide px-8 py-3.5 border border-[#c8c3bc] text-charcoal hover:border-colonial-blue hover:text-colonial-blue transition-colors duration-200"
-            >
-              One-on-one coaching
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="btn-primary inline-block bg-charcoal text-white text-sm tracking-wide px-8 py-3.5 hover:bg-[#3d3d3b] transition-colors duration-200"
+          >
+            Start a conversation &rarr;
+          </Link>
         </div>
       </section>
     </>

@@ -7,8 +7,23 @@ const nextConfig = {
     return [
       {
         source: "/leadership-development",
-        destination: "/talent-development",
+        destination: "/",
         permanent: true,
+      },
+      {
+        source: "/talent-development",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/newsletter",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/speaking",
+        destination: "/",
+        permanent: false,
       },
     ];
   },

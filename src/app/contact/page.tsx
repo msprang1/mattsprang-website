@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact | Matt Sprang",
   description:
-    "Looking to book a talk, start coaching, or have a real conversation about your team? Matt Sprang reads every message himself. Greater Philadelphia region and national bookings.",
+    "Start a conversation with Matt Sprang about growing your business without giving it more of you.",
 };
 
 export default function Contact() {
@@ -18,22 +18,20 @@ export default function Contact() {
               Contact
             </p>
             <h1 className="font-serif text-4xl md:text-5xl text-charcoal mb-4 leading-tight">
-              Let&apos;s Talk.
+              Let&apos;s start a conversation.
             </h1>
             <div className="section-rule" />
             <p className="text-body-text leading-relaxed">
-              Whether you&apos;re looking to book a talk, start coaching, or
-              just want to have a real conversation about where your team is,
-              this is the right place to start.
+              Tell me a little about you and your business. I read every
+              submission myself and will follow up personally.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Form + direct contact */}
+      {/* Form */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Form */}
           <div className="md:col-span-2">
             <ContactForm />
           </div>
@@ -42,19 +40,13 @@ export default function Contact() {
           <div className="space-y-8">
             <div>
               <p className="text-xs uppercase tracking-widest text-colonial-blue mb-4 font-semibold">
-                Reach out directly
+                Prefer email?
               </p>
               <a
                 href="mailto:matt@mattsprang.com"
-                className="block text-charcoal hover:text-colonial-blue transition-colors duration-200 mb-2"
-              >
-                matt@mattsprang.com
-              </a>
-              <a
-                href="tel:+16098207946"
                 className="block text-charcoal hover:text-colonial-blue transition-colors duration-200"
               >
-                (609) 820-7946
+                matt@mattsprang.com
               </a>
             </div>
 
@@ -67,24 +59,6 @@ export default function Contact() {
                 auto-response, no funnel. He will be in touch within a day or
                 two.
               </p>
-            </div>
-
-            <div className="border-t border-[#e2ddd8] pt-8 space-y-3">
-              <p className="text-xs uppercase tracking-widest text-light-gray mb-4 font-semibold">
-                Offerings
-              </p>
-              <div className="text-sm text-body-text space-y-2">
-                <p className="flex items-start gap-2">
-                  <span className="text-colonial-blue">&#9670;</span> Speaking
-                </p>
-                <p className="flex items-start gap-2">
-                  <span className="text-colonial-blue">&#9670;</span> Talent
-                  Development
-                </p>
-                <p className="flex items-start gap-2">
-                  <span className="text-colonial-blue">&#9670;</span> Coaching
-                </p>
-              </div>
             </div>
           </div>
         </div>

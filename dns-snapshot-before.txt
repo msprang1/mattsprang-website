@@ -1,0 +1,27 @@
+=== DNS SNAPSHOT BEFORE — mattsprang.com ===
+Date: Tue Nov 24 19:29:45 UTC 2026
+
+--- MX ---
+10 alt4.aspmx.l.google.com.
+1 aspmx.l.google.com.
+5 alt2.aspmx.l.google.com.
+5 alt1.aspmx.l.google.com.
+10 alt3.aspmx.l.google.com.
+
+--- TXT @ (SPF etc) ---
+"v=spf1 include:_spf.google.com ~all"
+
+--- TXT _dmarc ---
+"v=DMARC1; p=quarantine; adkim=r; aspf=r; rua=mailto:dmarc_rua@onsecureserver.net;"
+
+--- TXT google._domainkey ---
+"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkJjhho5icQQWwEPLVnF5xXk7Rn6D6rG2S5wN/Y/lF4d3sPvwxRCcoZLsBMb1aaNa1D+xgbU3Ydnl5i4ai7nEzEzZkY9nOPYrO8lJ+lTp3VDfqyRbQ0sXRGEPqcrv9s3FoIKJ5Gs1s++CumG5WsLEUjxniKzz3IfiAJKT4LAJy8HTL6apfyV9QxgqTRiJyONGT" "eTURxrggXzmAxmqgXaPW+/K/e/1pJ1Du9dlsnu4hRH2hxmgnxebFMtxvrStmubuaY3nm7oO4tNmEgomGCqUzfII7bt9WngoVYUx27QIgdMTZc1aQTNt8hSRAx6oI+w+pd3fC8oZLKd53/IHDRZRCQIDAQAB"
+
+--- TXT resend._domainkey ---
+"p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCogq6iYq+sYiKmPKKWlOguxERU/TxKOEiC9QMqrFx+QASGB0wkkA+n/dU3xFZlQ+bphIRB+DdKAcale1wbCY2mswR8YXabubh6WWwHleBD+qGl+EzeABbDxkoNkxBa92gStKZzpl0IC/kyYnyE6rn8i4bkeoDD2cUbaFxqT0YGmwIDAQAB"
+
+--- send subdomain (MX) ---
+10 feedback-smtp.us-east-1.amazonses.com.
+
+--- send subdomain (TXT/SPF) ---
+"v=spf1 include:amazonses.com ~all"
