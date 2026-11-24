@@ -71,38 +71,28 @@ export default function About() {
       />
 
       {/* Hero */}
-      <section className="texture bg-off-white border-b border-[#e2ddd8] pt-16">
-        <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-xs uppercase tracking-widest text-colonial-blue mb-5 font-semibold">
-                About
-              </p>
-              <h1 className="font-serif text-4xl md:text-5xl text-charcoal mb-6 leading-tight">
-                I&apos;ve been the owner everything runs through.
-              </h1>
-              <div className="section-rule" />
-            </div>
+      <section className="relative min-h-[60vh] bg-[#111110] flex items-center overflow-hidden">
+        {/* Photo — right side */}
+        <div className="absolute right-0 top-0 bottom-0 w-[30%]">
+          <Image
+            src="/images/matt-lifestyle-1.jpg"
+            alt="Matt Sprang, business coach, Greater Philadelphia region"
+            fill
+            className="object-cover"
+            style={{ objectPosition: "50% 15%" }}
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#111110] via-[#111110]/30 to-transparent" />
+        </div>
 
-            <div className="relative">
-              <Image
-                src="/images/matt-lifestyle-1.jpg"
-                alt="Matt Sprang, business coach, Greater Philadelphia region"
-                width={600}
-                height={600}
-                className="w-full h-auto object-cover"
-                style={{
-                  maxHeight: "520px",
-                  objectFit: "cover",
-                  objectPosition: "center top",
-                }}
-              />
-              <div
-                className="h-1.5 w-full"
-                style={{ backgroundColor: "#81a2b6" }}
-              />
-            </div>
-          </div>
+        {/* Content */}
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pt-24 pb-16">
+          <p className="text-colonial-blue uppercase tracking-widest text-xs mb-4 font-semibold">
+            About
+          </p>
+          <h1 className="font-serif text-4xl md:text-6xl text-white leading-tight max-w-2xl">
+            I&apos;ve been the owner everything runs through.
+          </h1>
         </div>
       </section>
 

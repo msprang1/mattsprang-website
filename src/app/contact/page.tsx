@@ -11,21 +11,18 @@ export default function Contact() {
   return (
     <>
       {/* Hero */}
-      <section className="texture bg-off-white border-b border-[#e2ddd8] pt-16">
-        <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
-          <div className="max-w-xl">
-            <p className="text-xs uppercase tracking-widest text-colonial-blue mb-5 font-semibold">
-              Contact
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-charcoal mb-4 leading-tight">
-              Let&apos;s start a conversation.
-            </h1>
-            <div className="section-rule" />
-            <p className="text-body-text leading-relaxed">
-              Tell me a little about you and your business. I read every
-              submission myself and will follow up personally.
-            </p>
-          </div>
+      <section className="bg-[#111110] pt-24 pb-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <p className="text-colonial-blue uppercase tracking-widest text-xs mb-4 font-semibold">
+            Contact
+          </p>
+          <h1 className="font-serif text-4xl md:text-6xl text-white leading-tight max-w-2xl mb-4">
+            Let&apos;s start a conversation.
+          </h1>
+          <p className="text-white/60 text-lg max-w-lg leading-relaxed">
+            Tell me a little about you and your business. I read every
+            submission myself and will follow up personally.
+          </p>
         </div>
       </section>
 

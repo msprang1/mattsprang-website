@@ -35,17 +35,28 @@ export default function Coaching() {
       />
 
       {/* Hero */}
-      <section className="texture bg-off-white border-b border-[#e2ddd8] pt-16">
-        <div className="max-w-6xl mx-auto px-6 py-16 md:py-20">
-          <div className="max-w-2xl">
-            <p className="text-xs uppercase tracking-widest text-colonial-blue mb-5 font-semibold">
-              Coaching
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-charcoal mb-6 leading-tight">
-              Your business should grow without taking more of you.
-            </h1>
-            <div className="section-rule" />
-          </div>
+      <section className="relative min-h-[60vh] bg-[#111110] flex items-center overflow-hidden">
+        {/* Photo — right side */}
+        <div className="absolute right-0 top-0 bottom-0 w-[30%]">
+          <Image
+            src="/images/matt-outdoor.jpg"
+            alt="Matt Sprang, business coach, Greater Philadelphia region"
+            fill
+            className="object-cover"
+            style={{ objectPosition: "50% 20%" }}
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#111110] via-[#111110]/30 to-transparent" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pt-24 pb-16">
+          <p className="text-colonial-blue uppercase tracking-widest text-xs mb-4 font-semibold">
+            Coaching
+          </p>
+          <h1 className="font-serif text-4xl md:text-6xl text-white leading-tight max-w-2xl">
+            Your business should grow without taking more of you.
+          </h1>
         </div>
       </section>
 
